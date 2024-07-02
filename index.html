@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <h2>StyleSphere</h2>
+        </div>
+
+        <div class="sidebar-div">
+           <ul class="sidebar">
+            <li onclick=hidebar() class="close-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="b"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New Collections</a></li>
+            <li><a href="#">My Cart</a></li>
+            <li><a href="#">Connect</a></li>
+           </ul>
+
+           <ul>
+            <li onclick=showbar() class="open-icon"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="b"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+           </ul>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li><img class="down-icon" src= "assets/down-arrow.png" alt="down-arrow" style="width: 16px; height: 16px;">
+                <li><a href="#">More</a></li><img class="down-icon" src= "assets/down-arrow.png" alt="down-arrow" style="width: 16px; height: 16px;">
+            </ul>
+        </div>
+
+        <div class="search-box">
+            <img src="assets/search.png" alt="search btn" style="width: 16px; height: 16px;">
+            <input type="text" placeholder=" Search...">
+        </div>
+        
+        <div class="side-icons">
+            <img src="assets/heart.png" alt="heart logo" style="height: 20px; width: 20px;">
+            <img src="assets/bag.png" alt="bag logo" style="height: 20px; width: 20px;">
+            <img src="assets/user.png" alt="login logo" style="height: 20px; width: 20px;">          
+        </div>
+    </div>
+
+    <div class="main-message">
+        <div class="msg1">
+            <h1>NEW TROUSER COLLECTIONS</h1>
+        </div>
+        <div class="msg2">
+            <h2>Get 20% Off Your First Order!</h2>
+        </div>
+        <div class="msg3">
+            <p>Discover the latest trends, timeless classics, and exclusive collections curated just for you.</p>
+        </div>
+
+        <div class="shop-now-btn">
+            <button style=" background-color: rgba(white, white, white, 0.3);">Shop Now</button>
+        </div>
+    </div>
+    <script>
+        function showbar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display="flex";
+            const open_icon = document.querySelector('.open-icon');
+            open_icon.style.display="none";
+        }
+        function hidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display="none";
+            const open_icon = document.querySelector('.open-icon');
+            open_icon.style.display="block";
+        }
+    </script>
+</body>
+</html>
